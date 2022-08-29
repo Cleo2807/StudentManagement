@@ -25,14 +25,27 @@ namespace StudentManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           Form2 form = new Form2();    
+            form.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'student_dbDataSet2.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter.Fill(this.student_dbDataSet2.Student);
+           
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 form = new Form3();
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
         }
     }
 }

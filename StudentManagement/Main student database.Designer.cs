@@ -35,18 +35,18 @@ namespace StudentManagement
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.student_dbDataSet2 = new StudentManagement.student_dbDataSet2();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new StudentManagement.student_dbDataSet2TableAdapters.StudentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fatherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.motherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.student_dbDataSet2 = new StudentManagement.student_dbDataSet2();
+            this.studentTableAdapter = new StudentManagement.student_dbDataSet2TableAdapters.StudentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.student_dbDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student_dbDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -65,8 +65,9 @@ namespace StudentManagement
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 48);
             this.button2.TabIndex = 1;
-            this.button2.Text = "VIEW";
+            this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -76,6 +77,7 @@ namespace StudentManagement
             this.button3.TabIndex = 2;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
@@ -98,26 +100,12 @@ namespace StudentManagement
             this.classDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.studentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(177, 227);
+            this.dataGridView1.Location = new System.Drawing.Point(107, 209);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(962, 388);
+            this.dataGridView1.Size = new System.Drawing.Size(964, 388);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // student_dbDataSet2
-            // 
-            this.student_dbDataSet2.DataSetName = "student_dbDataSet2";
-            this.student_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.student_dbDataSet2;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -167,6 +155,20 @@ namespace StudentManagement
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             this.cityDataGridViewTextBoxColumn.Width = 150;
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.student_dbDataSet2;
+            // 
+            // student_dbDataSet2
+            // 
+            this.student_dbDataSet2.DataSetName = "student_dbDataSet2";
+            this.student_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -182,8 +184,8 @@ namespace StudentManagement
             this.Text = "STUDENT MANAGEMENT SYSTEM";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.student_dbDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student_dbDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
