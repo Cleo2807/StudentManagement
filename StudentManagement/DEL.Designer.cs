@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.delbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,14 +44,15 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // delbtn
             // 
-            this.button1.Location = new System.Drawing.Point(601, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "DELETE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.delbtn.Location = new System.Drawing.Point(601, 171);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(103, 34);
+            this.delbtn.TabIndex = 0;
+            this.delbtn.Text = "DELETE";
+            this.delbtn.UseVisualStyleBackColor = true;
+            this.delbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -176,7 +177,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.delbtn);
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);
@@ -186,7 +187,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button delbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;

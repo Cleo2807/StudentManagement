@@ -34,19 +34,21 @@ namespace StudentManagement
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.student_dbDataSet2 = new StudentManagement.student_dbDataSet2();
             this.studentTableAdapter = new StudentManagement.student_dbDataSet2TableAdapters.StudentTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.GridStudentData = new System.Windows.Forms.DataGridView();
+            this.studentdbDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FatherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MotherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.student_dbDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridStudentData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentdbDataSet2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -88,73 +90,6 @@ namespace StudentManagement
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "STUDENT MANAGEMENT SYSTEM";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.studentNameDataGridViewTextBoxColumn,
-            this.fatherNameDataGridViewTextBoxColumn,
-            this.motherNameDataGridViewTextBoxColumn,
-            this.classDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 209);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(964, 388);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // studentNameDataGridViewTextBoxColumn
-            // 
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fatherNameDataGridViewTextBoxColumn
-            // 
-            this.fatherNameDataGridViewTextBoxColumn.DataPropertyName = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn.HeaderText = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.fatherNameDataGridViewTextBoxColumn.Name = "fatherNameDataGridViewTextBoxColumn";
-            this.fatherNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // motherNameDataGridViewTextBoxColumn
-            // 
-            this.motherNameDataGridViewTextBoxColumn.DataPropertyName = "MotherName";
-            this.motherNameDataGridViewTextBoxColumn.HeaderText = "MotherName";
-            this.motherNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.motherNameDataGridViewTextBoxColumn.Name = "motherNameDataGridViewTextBoxColumn";
-            this.motherNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // classDataGridViewTextBoxColumn
-            // 
-            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
-            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
-            this.classDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
-            this.classDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.Width = 150;
-            // 
             // studentBindingSource
             // 
             this.studentBindingSource.DataMember = "Student";
@@ -169,12 +104,76 @@ namespace StudentManagement
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
+            // GridStudentData
+            // 
+            this.GridStudentData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridStudentData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.StudentName,
+            this.FatherName,
+            this.MotherName,
+            this.Class,
+            this.City});
+            this.GridStudentData.Location = new System.Drawing.Point(164, 222);
+            this.GridStudentData.Name = "GridStudentData";
+            this.GridStudentData.RowHeadersWidth = 62;
+            this.GridStudentData.RowTemplate.Height = 28;
+            this.GridStudentData.Size = new System.Drawing.Size(964, 388);
+            this.GridStudentData.TabIndex = 5;
+            // 
+            // studentdbDataSet2BindingSource
+            // 
+            this.studentdbDataSet2BindingSource.DataSource = this.student_dbDataSet2;
+            this.studentdbDataSet2BindingSource.Position = 0;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 8;
+            this.Id.Name = "Id";
+            this.Id.Width = 150;
+            // 
+            // StudentName
+            // 
+            this.StudentName.HeaderText = "StudentName";
+            this.StudentName.MinimumWidth = 8;
+            this.StudentName.Name = "StudentName";
+            this.StudentName.Width = 150;
+            // 
+            // FatherName
+            // 
+            this.FatherName.HeaderText = "FatherName";
+            this.FatherName.MinimumWidth = 8;
+            this.FatherName.Name = "FatherName";
+            this.FatherName.Width = 150;
+            // 
+            // MotherName
+            // 
+            this.MotherName.HeaderText = "MotherName";
+            this.MotherName.MinimumWidth = 8;
+            this.MotherName.Name = "MotherName";
+            this.MotherName.Width = 150;
+            // 
+            // Class
+            // 
+            this.Class.HeaderText = "Class";
+            this.Class.MinimumWidth = 8;
+            this.Class.Name = "Class";
+            this.Class.Width = 150;
+            // 
+            // City
+            // 
+            this.City.HeaderText = "City";
+            this.City.MinimumWidth = 8;
+            this.City.Name = "City";
+            this.City.Width = 150;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 653);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridStudentData);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -182,10 +181,10 @@ namespace StudentManagement
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "STUDENT MANAGEMENT SYSTEM";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.student_dbDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridStudentData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentdbDataSet2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,16 +196,17 @@ namespace StudentManagement
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private student_dbDataSet2 student_dbDataSet2;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private student_dbDataSet2TableAdapters.StudentTableAdapter studentTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fatherNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn motherNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn classDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView GridStudentData;
+        private System.Windows.Forms.BindingSource studentdbDataSet2BindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FatherName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MotherName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Class;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
     }
 }
 

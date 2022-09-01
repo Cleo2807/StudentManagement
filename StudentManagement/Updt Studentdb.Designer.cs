@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Replacebtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbSID = new System.Windows.Forms.TextBox();
+            this.tbSN = new System.Windows.Forms.TextBox();
+            this.tbFN = new System.Windows.Forms.TextBox();
+            this.tbMN = new System.Windows.Forms.TextBox();
+            this.tbCL = new System.Windows.Forms.TextBox();
+            this.tbCty = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // Replacebtn
             // 
-            this.button1.AccessibleName = "Replacebutton";
-            this.button1.Location = new System.Drawing.Point(594, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 72);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "REPLACE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Replacebtn.AccessibleName = "";
+            this.Replacebtn.Location = new System.Drawing.Point(594, 136);
+            this.Replacebtn.Name = "Replacebtn";
+            this.Replacebtn.Size = new System.Drawing.Size(105, 72);
+            this.Replacebtn.TabIndex = 0;
+            this.Replacebtn.Text = "REPLACE";
+            this.Replacebtn.UseVisualStyleBackColor = true;
+            this.Replacebtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -108,72 +108,72 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "City";
             // 
-            // textBox2
+            // tbSID
             // 
-            this.textBox2.AccessibleName = "TBID";
-            this.textBox2.Location = new System.Drawing.Point(247, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 2;
+            this.tbSID.AccessibleName = "TBID";
+            this.tbSID.Location = new System.Drawing.Point(247, 51);
+            this.tbSID.Name = "tbSID";
+            this.tbSID.Size = new System.Drawing.Size(100, 26);
+            this.tbSID.TabIndex = 2;
             // 
-            // textBox3
+            // tbSN
             // 
-            this.textBox3.AccessibleName = "TBNAME";
-            this.textBox3.Location = new System.Drawing.Point(247, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 2;
+            this.tbSN.AccessibleName = "TBNAME";
+            this.tbSN.Location = new System.Drawing.Point(247, 90);
+            this.tbSN.Name = "tbSN";
+            this.tbSN.Size = new System.Drawing.Size(100, 26);
+            this.tbSN.TabIndex = 2;
             // 
-            // textBox4
+            // tbFN
             // 
-            this.textBox4.AccessibleName = "TBFN";
-            this.textBox4.Location = new System.Drawing.Point(247, 133);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 2;
+            this.tbFN.AccessibleName = "TBFN";
+            this.tbFN.Location = new System.Drawing.Point(247, 133);
+            this.tbFN.Name = "tbFN";
+            this.tbFN.Size = new System.Drawing.Size(100, 26);
+            this.tbFN.TabIndex = 2;
             // 
-            // textBox5
+            // tbMN
             // 
-            this.textBox5.AccessibleName = "TBMN";
-            this.textBox5.Location = new System.Drawing.Point(247, 188);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 2;
+            this.tbMN.AccessibleName = "TBMN";
+            this.tbMN.Location = new System.Drawing.Point(247, 188);
+            this.tbMN.Name = "tbMN";
+            this.tbMN.Size = new System.Drawing.Size(100, 26);
+            this.tbMN.TabIndex = 2;
             // 
-            // textBox6
+            // tbCL
             // 
-            this.textBox6.AccessibleName = "TBCLASS";
-            this.textBox6.Location = new System.Drawing.Point(247, 234);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 26);
-            this.textBox6.TabIndex = 2;
+            this.tbCL.AccessibleName = "TBCLASS";
+            this.tbCL.Location = new System.Drawing.Point(247, 234);
+            this.tbCL.Name = "tbCL";
+            this.tbCL.Size = new System.Drawing.Size(100, 26);
+            this.tbCL.TabIndex = 2;
             // 
-            // textBox7
+            // tbCty
             // 
-            this.textBox7.AccessibleName = "TBCITY";
-            this.textBox7.Location = new System.Drawing.Point(247, 284);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 26);
-            this.textBox7.TabIndex = 2;
+            this.tbCty.AccessibleName = "TBCITY";
+            this.tbCty.Location = new System.Drawing.Point(247, 284);
+            this.tbCty.Name = "tbCty";
+            this.tbCty.Size = new System.Drawing.Size(100, 26);
+            this.tbCty.TabIndex = 2;
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbCty);
+            this.Controls.Add(this.tbCL);
+            this.Controls.Add(this.tbMN);
+            this.Controls.Add(this.tbFN);
+            this.Controls.Add(this.tbSN);
+            this.Controls.Add(this.tbSID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Replacebtn);
             this.Name = "Form5";
             this.Text = "Form5";
             this.ResumeLayout(false);
@@ -183,18 +183,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Replacebtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbSID;
+        private System.Windows.Forms.TextBox tbSN;
+        private System.Windows.Forms.TextBox tbFN;
+        private System.Windows.Forms.TextBox tbMN;
+        private System.Windows.Forms.TextBox tbCL;
+        private System.Windows.Forms.TextBox tbCty;
     }
 }
