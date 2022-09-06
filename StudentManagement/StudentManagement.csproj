@@ -76,12 +76,6 @@
       <DependentUpon>ADD Studentdb.cs</DependentUpon>
       <Link>ADD Studentdb.Designer.cs</Link>
     </Compile>
-    <Compile Include="DEL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DEL.Designer.cs">
-      <DependentUpon>DEL.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="student_dbDataSet2.cs">
       <DependentUpon>student_dbDataSet2.xsd</DependentUpon>
@@ -104,9 +98,6 @@
     <EmbeddedResource Include="..\..\..\..\Desktop\add\ADD Studentdb.resx">
       <DependentUpon>ADD Studentdb.cs</DependentUpon>
       <Link>ADD Studentdb.resx</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DEL.resx">
-      <DependentUpon>DEL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Updt Studentdb.resx">
       <DependentUpon>Updt Studentdb.cs</DependentUpon>

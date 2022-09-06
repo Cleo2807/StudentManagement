@@ -11,26 +11,16 @@ using System.Data.SqlClient;
 
 namespace StudentManagement
 {
-    public partial class Form1 : Form
+    public partial class SMSFORM : Form
     {
 
 
-        public Form1()
+        public SMSFORM()
         {
             InitializeComponent();
             Dataload();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 form = new Form2();
-            form.Show();
-        }
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = Student; Integrated Security = True; uid = Root; password = root");
         private void Dataload()
         {
@@ -49,19 +39,19 @@ namespace StudentManagement
         }
 
 
-
-
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCreate_Click(object sender, EventArgs e)
         {
-            Form5 form = new Form5();
-            form.Show();
+            ADDFORM form = new ADDFORM();
+            form.ShowDialog();
+            Dataload();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonUPDATEDelete_Click(object sender, EventArgs e)
         {
-            Form4 form = new Form4();
-            form.Show();
+
+            int Student = (int)GridStudentData.SelectedRows[0].Cells[0].Value;
+            UPDATEFORM form = new UPDATEFORM(Student);
+            form.ShowDialog();
+            Dataload();
         }
     }
 }

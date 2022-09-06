@@ -1,6 +1,6 @@
 ﻿namespace StudentManagement
 {
-    partial class Form5
+    partial class UPDATEFORM
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.tbMN = new System.Windows.Forms.TextBox();
             this.tbCL = new System.Windows.Forms.TextBox();
             this.tbCty = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Replacebtn
@@ -50,9 +51,9 @@
             this.Replacebtn.Name = "Replacebtn";
             this.Replacebtn.Size = new System.Drawing.Size(105, 72);
             this.Replacebtn.TabIndex = 0;
-            this.Replacebtn.Text = "REPLACE";
+            this.Replacebtn.Text = "UPDATE\r\n";
             this.Replacebtn.UseVisualStyleBackColor = true;
-            this.Replacebtn.Click += new System.EventHandler(this.button1_Click);
+            this.Replacebtn.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label1
             // 
@@ -77,9 +78,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(109, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Faher Name";
+            this.label3.Text = "Father Name";
             // 
             // label4
             // 
@@ -111,6 +112,7 @@
             // tbSID
             // 
             this.tbSID.AccessibleName = "TBID";
+            this.tbSID.Enabled = false;
             this.tbSID.Location = new System.Drawing.Point(247, 51);
             this.tbSID.Name = "tbSID";
             this.tbSID.Size = new System.Drawing.Size(100, 26);
@@ -156,11 +158,22 @@
             this.tbCty.Size = new System.Drawing.Size(100, 26);
             this.tbCty.TabIndex = 2;
             // 
-            // Form5
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(594, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 60);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "DELETE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // UPDATEFORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(787, 440);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbCty);
             this.Controls.Add(this.tbCL);
             this.Controls.Add(this.tbMN);
@@ -174,8 +187,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Replacebtn);
-            this.Name = "Form5";
-            this.Text = "Form5";
+            this.Name = "UPDATEFORM";
+            this.Text = "Modify/DeleteForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +209,6 @@
         private System.Windows.Forms.TextBox tbMN;
         private System.Windows.Forms.TextBox tbCL;
         private System.Windows.Forms.TextBox tbCty;
+        private System.Windows.Forms.Button button1;
     }
 }
